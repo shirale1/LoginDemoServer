@@ -25,7 +25,7 @@ public partial class LoginDemoDbContext : DbContext
     {
         modelBuilder.Entity<Users>(entity =>
         {
-            entity.HasKey(e => e.Email).HasName("PK__Users__A9D105358B4E29D2");
+            entity.HasKey(e => e.Email).HasName("PK__Users__A9D1053531C8D56B");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -40,13 +40,13 @@ namespace LoginDemoServer.Controllers
                 //Check if user exist for this email and if password match, if not return Access Denied (Error 403) 
                 if (modelsUser == null || modelsUser.Password != loginDto.Password) 
                 {
-                    return Unauthorized();
+                    return Unauthorized("user or password not valid/user not exists");
                 }
 
                 //Login suceed! now mark login in session memory!
                 HttpContext.Session.SetString("loggedInUser", modelsUser.Email);
 
-                return Ok(new DTO.Users(modelsUser));
+                return Ok(new DTO.UserDTO(modelsUser));
             }
             catch (Exception ex)
             {

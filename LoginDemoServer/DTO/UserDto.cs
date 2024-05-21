@@ -1,7 +1,7 @@
 ﻿using LoginDemoServer.Models;
 namespace LoginDemoServer.DTO
 {
-    public class Users
+    public class UserDTO
     {
         public string Email { get; set; }
         public string Password { get; set; }
@@ -14,8 +14,8 @@ namespace LoginDemoServer.DTO
             return new Models.Users() { Email = Email, Password = Password, PhoneNumber = PhoneNumber, BirthDate = BirthDate, Name = Name };
         }
 
-        public Users() { }
-        public Users(Models.Users modelUser)
+        public UserDTO() { }
+        public UserDTO(Models.Users modelUser)
         {
             this.PhoneNumber = modelUser.PhoneNumber;
             this.Name = modelUser.Name;
