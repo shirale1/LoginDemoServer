@@ -75,7 +75,7 @@ namespace LoginDemoServer.Controllers
                 //user is logged in - lets check who is the user
                 Models.Users modelsUser = context.GetUSerFromDB(userEmail);
              
-                return Ok(new DTO.Users(modelsUser));
+                return Ok(new DTO.UserDTO(modelsUser));
             }
             catch (Exception ex)
             {
